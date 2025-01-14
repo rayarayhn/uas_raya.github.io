@@ -1,0 +1,1338 @@
+/* Reset default margin dan padding */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+/* Styling untuk header */
+header {
+    background-color: #003366;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+header . {
+    display: flex;
+    align-items: center;
+}
+
+header .logo img {
+    width: auto; /* Mengatur lebar otomatis agar tidak merusak proporsi */
+    height: 50px; /* Atur tinggi sesuai kebutuhan */
+    object-fit: contain; /* Memastikan gambar tetap proporsional */
+    margin-right: 10px;
+}
+
+
+header .logo span {
+    font-size: 20px !important; /* Memastikan ukuran font diterapkan */
+    font-weight: bold;
+    color: white;
+    text-transform: uppercase;
+}
+
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ffcc00; /* Warna hover */
+}
+
+/* Styling untuk gambar slider dengan efek gelap */
+.image-slider {
+    position: relative;
+    max-width: 100%;
+    margin: 20px auto;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.slider-container {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.slide {
+    min-width: 100%;
+    transition: 0.5s ease;
+}
+
+.slide img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    filter: brightness(70%);
+    border-radius: 8px;
+}
+
+/* Tombol Navigasi */
+button.prev, button.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 18px;
+    z-index: 10;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+}
+
+button.prev {
+    left: 10px;
+}
+
+button.next {
+    right: 10px;
+}
+
+button.prev:hover, button.next:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+/* Responsif untuk layar kecil */
+@media screen and (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px;
+    }
+
+    header .logo {
+        margin-bottom: 10px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    nav ul li a {
+        font-size: 14px;
+    }
+
+    /* Mengatur ukuran gambar slider untuk perangkat kecil */
+    .image-slider {
+        margin: 10px 0;
+    }
+
+    .image-slider .slider-container {
+        flex-direction: column;
+    }
+
+    .slide img {
+        width: 100%;
+        height: 250px;
+        object-fit: cover;
+        filter: brightness(70%);
+        border-radius: 8px;
+    }
+
+    /* Mengatur ukuran tombol navigasi untuk perangkat kecil */
+    button.prev, button.next {
+        padding: 8px;
+        font-size: 16px;
+    }
+}
+
+/* Styling untuk footer */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+.footer-icons {
+    margin-top: 10px;
+}
+
+.footer-icons a {
+    color: white;
+    font-size: 24px;
+    margin: 0 10px;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-icons a:hover {
+    color: #4CAF50; /* Warna saat hover */
+}
+
+
+/* Styling untuk Hero Section */
+.hero {
+    background-image: url('images/hero-background.jpg'); /* Ganti dengan gambar background yang sesuai */
+    background-size: cover;
+    background-position: center;
+    height: 400px; /* Sesuaikan tinggi hero */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    padding: 0 20px;
+    position: relative;
+}
+
+/* Efek animasi muncul */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hero-content h1 {
+    font-size: 48px; /* Memperbesar ukuran teks */
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-transform: uppercase; /* Teks jadi kapital semua */
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7); /* Menambahkan efek bayangan pada teks */
+    color:rgb(255, 255, 255); /* Warna biru pada teks */
+    background-color: #003366; /* Latar belakang putih transparan */
+    padding: 15px; /* Memberikan ruang di sekitar teks */
+    border-radius: 10px; /* Memberikan sudut melengkung pada latar belakang */
+    animation: fadeIn 1s ease-out; /* Menambahkan animasi muncul */
+}
+
+.hero-content p {
+    font-size: 24px; /* Ukuran teks deskripsi lebih besar */
+    line-height: 1.5;
+    max-width: 700px; /* Menyesuaikan lebar teks */
+    margin: 0 auto;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.6); /* Menambahkan bayangan pada deskripsi */
+    color:rgb(255, 255, 255); /* Warna biru pada teks */
+    background-color: #003366; /* Latar belakang putih transparan */
+    padding: 10px; /* Memberikan ruang di sekitar teks */
+    border-radius: 10px; /* Memberikan sudut melengkung pada latar belakang */
+    animation: fadeIn 1.5s ease-out; /* Menambahkan animasi muncul dengan sedikit jeda */
+}
+
+/* Gaya umum untuk kotak */
+.feature-box {
+    text-align: center;
+    width: 30%;
+    padding: 20px;
+    background-color: #f9f9f9; /* Warna latar belakang default */
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+/* Background color untuk setiap kotak */
+.feature-box:first-child {
+    background-color: #ffe5b4; /* Warna latar belakang untuk kotak pertama */
+}
+
+.feature-box:nth-child(2) {
+    background-color: #c8f7c5; /* Warna latar belakang untuk kotak kedua */
+}
+
+.feature-box:nth-child(3) {
+    background-color: #cce5ff; /* Warna latar belakang untuk kotak ketiga */
+}
+
+/* Efek hover untuk kotak */
+.feature-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+    background-color: #f0f0f0; /* Warna saat di-hover */
+}
+
+/* Warna umum untuk semua simbol */
+.feature-box i {
+    font-size: 2em; /* Atur ukuran simbol */
+    margin-bottom: 10px;
+    color: #ff5722; /* Warna simbol (ubah sesuai keinginan) */
+}
+
+/* Warna berbeda untuk setiap simbol (opsional) */
+.feature-box:first-child i {
+    color: gold; /* Warna simbol pertama (Unggul dalam Prestasi) */
+}
+
+.feature-box:nth-child(2) i {
+    color: green; /* Warna simbol kedua (Religius) */
+}
+
+.feature-box:nth-child(3) i {
+    color: blue; /* Warna simbol ketiga (Berkarakter) */
+}
+
+
+
+/* Responsif untuk layar kecil */
+@media screen and (max-width: 768px) {
+    .features {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .feature-box {
+        width: 80%;
+        margin-bottom: 20px;
+    }
+}
+
+/* Styling untuk kotak informasi tentang SMK Negeri 5 Kuningan */
+.about {
+    text-align: center; /* Menyelaraskan teks dalam section 'about' ke tengah */
+}
+
+.info-box {
+    background-color: #003366; /* Warna latar belakang yang lembut */
+    padding: 20px;
+    margin-top: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 1px solid #d1e7fd; /* Border halus dengan warna biru muda */
+    text-align: left; /* Menyelaraskan teks di dalam kotak ke kiri */
+    max-width: 900px; /* Menetapkan lebar maksimal kotak */
+    margin-left: auto;
+    margin-right: auto; /* Membuat kotak tetap berada di tengah halaman */
+}
+
+.info-box p {
+    font-size: 16px;
+    color: #ffffff;
+    line-height: 1.6;
+}
+
+/* Umum */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+h1, h2, h3 {
+    margin: 0;
+    padding: 10px 0;
+    color: #333;
+}
+
+p {
+    margin: 0;
+    padding: 5px 0;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #005f73;
+    color: #fff;
+}
+
+header .logo {
+    display: flex;
+    align-items: center;
+}
+
+header .logo img {
+    height: 50px;
+    margin-right: 10px;
+}
+
+header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+header nav ul li {
+    margin: 0 10px;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+header nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Hero Section */
+.hero {
+    background: url('images/hero.jpg') no-repeat center center/cover;
+    color: #fff;
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.hero-content h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.hero-content p {
+    font-size: 1.2em;
+}
+
+/* Features Section */
+.features {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    background-color: #e9ecef;
+}
+
+.feature-box {
+    text-align: center;
+    width: 30%;
+}
+
+.feature-box i {
+    font-size: 2em;
+    color: #005f73;
+    margin-bottom: 10px;
+}
+
+/* Ekstrakurikuler Section */
+.extracurricular {
+    padding: 40px 20px;
+    background-color: #f4f4f9;
+    text-align: center;
+}
+
+.extracurricular h2 {
+    margin-bottom: 20px;
+    font-size: 2em;
+}
+
+.extracurricular-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.extracurricular-box {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.extracurricular-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+.extracurricular-box h3 {
+    margin-bottom: 10px;
+    color: #005f73;
+}
+
+.extracurricular-box p {
+    color: #666;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #005f73;
+    color: #fff;
+    font-size: 0.9em;
+}
+
+/* Ekstrakurikuler Section */
+.extracurricular {
+    padding: 40px 20px;
+    background-color: #f4f4f9;
+    text-align: center;
+}
+
+.extracurricular h2 {
+    margin-bottom: 20px;
+    font-size: 2em;
+}
+
+.extracurricular-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.extracurricular-box {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+}
+
+.extracurricular-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+.extracurricular-box img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.extracurricular-box h3 {
+    margin-bottom: 10px;
+    color: #005f73;
+}
+
+.extracurricular-box p {
+    color: #666;
+}
+
+//profil
+
+.headmaster {
+    margin: 20px 0;
+    text-align: center;
+}
+
+.headmaster h2 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.headmaster-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 15px;
+}
+
+.headmaster-info img {
+    width: 200px;
+    height: auto;
+    border-radius: 50%;
+    border: 3px solid #ddd;
+    object-fit: cover;
+    margin-top: 20px;
+}
+
+.headmaster-info .description {
+    max-width: 500px;
+    text-align: left;
+}
+
+.headmaster-info .description h3 {
+    font-size: 1.5em;
+    margin-bottom: 5px;
+    color: #005f73;
+}
+
+.headmaster-info .description p {
+    font-size: 1em;
+    line-height: 1.6;
+    color: #555;
+}
+
+/* Atur gambar profil sekolah */
+.profile-content {
+    text-align: center;
+}
+
+.profile-photo {
+    width: 1200px; /* Lebar menyesuaikan */
+    height: 500px; /* Atur panjang gambar menjadi 300px */
+    opacity: 0.8; /* Atur opasitas */
+    transition: opacity 0.3s ease;
+    margin: 20px auto; /* Tambahkan margin agar gambar tetap di tengah */
+    border-radius: 10px; /* Opsional: buat sudut gambar melengkung */
+}
+
+.profile-photo:hover {
+    opacity: 1; /* Hilangkan transparansi saat hover */
+}
+
+/* Atur gambar kepala sekolah */
+.headmaster-info {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.headmaster-photo {
+    width: auto; /* Lebar menyesuaikan */
+    height: 200px; /* Atur panjang gambar menjadi 200px */
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+    border-radius: 10px; /* Opsional: buat sudut gambar melengkung */
+}
+
+.headmaster-photo:hover {
+    opacity: 1;
+}
+
+/* Deskripsi kepala sekolah */
+.description {
+    flex: 1;
+    text-align: justify;
+}
+
+/* Atur teks di bagian profil sekolah */
+.profile-content {
+    text-align: center; /* Pusatkan semua elemen di dalam .profile-content */
+    display: flex; /* Gunakan flexbox */
+    flex-direction: column; /* Susun elemen secara vertikal */
+    align-items: center; /* Pusatkan elemen secara horizontal */
+    justify-content: center; /* Pusatkan elemen secara vertikal */
+}
+
+/* Atur teks Visi & Misi */
+.profile h2 {
+    text-align: center; /* Pusatkan judul Visi & Misi */
+    font-size: 2rem; /* Perbesar ukuran teks judul */
+    margin-top: 20px; /* Tambahkan jarak atas */
+}
+
+.profile p {
+    text-align: center; /* Pusatkan teks Visi & Misi */
+    font-size: 2rem; /* Perbesar ukuran teks isi */
+    margin: 10px auto; /* Tambahkan margin otomatis untuk memastikan teks tetap di tengah */
+    max-width: 80%; /* Batasi lebar teks agar tetap nyaman dibaca */
+    line-height: 1.8; /* Atur tinggi baris untuk kenyamanan membaca */
+}
+
+.center-text {
+    text-align: center; /* Mengatur teks agar berada di tengah */
+    margin: 0 auto; /* Menambahkan margin otomatis untuk memastikan teks di tengah */
+}
+
+//jurusan
+/* Reset dasar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Gaya umum untuk body */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+/* Header */
+header {
+    background-color: #0056b3;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+header .logo img {
+    width: 80px;
+    vertical-align: middle;
+}
+
+header .logo span {
+    font-size: 1.8em;
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+/* Navigasi */
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.1em;
+    padding: 10px;
+}
+
+nav ul li a:hover {
+    background-color: #004494;
+    border-radius: 5px;
+}
+
+/* Bagian utama */
+main {
+    padding: 30px;
+}
+
+.majors h1 {
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+/* Desain untuk setiap jurusan */
+.major-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.major-card:hover {
+    transform: scale(1.05);
+}
+
+.major-card h2 {
+    font-size: 1.8em;
+    margin-bottom: 15px;
+    color: #0056b3;
+}
+
+.major-card p {
+    font-size: 1.1em;
+    line-height: 1.5;
+    color: #666;
+}
+
+/* Gaya untuk gambar */
+.major-photo {
+    width: 200px;  /* Memperbesar ukuran gambar */
+    height: 200px; /* Memperbesar ukuran gambar */
+    border-radius: 50%;
+    margin-bottom: 20px;
+    object-fit: cover;
+    border: 4px solid #0056b3; /* Menambahkan border */
+}
+
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 30px;
+}
+
+footer p {
+    font-size: 1em;
+}
+
+/* Responsif */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+    }
+
+    .major-card {
+        padding: 15px;
+    }
+}
+
+//Galeri
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #003366;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+header .logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header .logo img {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+}
+
+header .logo span {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Main Section */
+main {
+    padding: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h1 {
+    color: #333;
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 40px;
+}
+
+/* News Section */
+.news {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.news-item {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.news-image {
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.news-content {
+    flex: 1;
+}
+
+.news-item h2 {
+    font-size: 24px;
+    color: #333;
+}
+
+.news-item .news-date {
+    font-size: 14px;
+    color: #888;
+}
+
+.news-item p {
+    font-size: 16px;
+    color: #555;
+    margin-top: 10px;
+}
+
+.read-more {
+    display: inline-block;
+    margin-top: 10px;
+    font-size: 16px;
+    color: #4CAF50;
+    text-decoration: none;
+}
+
+.read-more:hover {
+    text-decoration: underline;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+//Berita Lengkap
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #003366;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+header .logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header .logo img {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+}
+
+header .logo span {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Main Section */
+main {
+    padding: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* News Detail */
+.news-detail article {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.news-detail h1 {
+    font-size: 28px;
+    color: #333;
+}
+
+.news-detail .news-date {
+    font-size: 14px;
+    color: #888;
+    margin-bottom: 20px;
+}
+
+.news-detail .news-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.news-detail p {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* Comments Section */
+.comments {
+    margin-top: 40px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.comments h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.comment-box {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.comment-box textarea {
+    width: 100%;
+    height: 100px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    resize: none;
+}
+
+.comment-box button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.comment-box button:hover {
+    background-color: #45a049;
+}
+
+.comment-list {
+    margin-top: 20px;
+}
+
+.comment-item {
+    background-color: #f9f9f9;
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.comment-item p {
+    font-size: 16px;
+    color: #555;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+//pendaftaran
+/* Resetting basic styles */
+body, h1, h2, p, ul {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Styling for the entire page */
+body {
+    background-color: #f4f4f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #007bff;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+header .logo img {
+    width: 100px;
+    margin-bottom: 10px;
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+header nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+header nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Main content styling */
+main {
+    padding: 30px;
+    background-color: white;
+    max-width: 1200px;
+    margin: 30px auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.registration h1 {
+    color: #007bff;
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+.registration p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.registration h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.registration ul {
+    list-style-type: none;
+    padding-left: 20px;
+    font-size: 16px;
+    color: #555;
+}
+
+.registration ul li {
+    margin-bottom: 10px;
+    padding-left: 5px;
+}
+
+/* Styling for brochure image */
+.brochure {
+    width: 50%; /* Mengatur lebar gambar menjadi 50% dari lebar elemen induk */
+    max-width: 500px; /* Maksimal lebar gambar 500px */
+    margin: 20px 0;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.brochure:hover {
+    transform: scale(1.05);
+}
+
+
+/* Styling for registration link */
+.registration {
+    text-align: center; /* Menengahkan teks */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Menengahkan elemen secara horizontal */
+    justify-content: center;
+    padding: 20px;
+}
+.registration a {
+    font-size: 18px;
+    text-decoration: none;
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.registration a:hover {
+    background-color: #45a049;
+}
+
+
+/* Footer styling */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+footer p {
+    font-size: 14px;
+}
+
+/* Styling untuk form */
+.registration-form {
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.registration-form h1 {
+    font-size: 24px;
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.registration-form .form-group {
+    margin-bottom: 20px;
+}
+
+.registration-form label {
+    font-size: 14px;
+    color: #555;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.registration-form input[type="text"], 
+.registration-form input[type="date"], 
+.registration-form input[type="email"], 
+.registration-form input[type="tel"], 
+.registration-form select, 
+.registration-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.registration-form textarea {
+    resize: vertical;
+}
+
+.registration-form button[type="submit"] {
+    background-color: #3498db;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.registration-form button[type="submit"]:hover {
+    background-color: #2980b9;
+}
+
+/* Styling untuk footer */
+footer {
+    background-color: #2c3e50;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.footer-icons {
+    margin-top: 10px;
+}
+
+.footer-icons a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.footer-icons a:hover {
+    color: #45a04;
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+    .registration-form {
+        padding: 20px;
+    }
+
+    header nav ul {
+        text-align: center;
+    }
+
+    header nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .registration-form button[type="submit"] {
+        width: auto;
+    }
+}
+
+
+
+
+
+
+
+
+

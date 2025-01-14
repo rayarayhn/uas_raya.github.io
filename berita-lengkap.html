@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Berita SMKN 5 Kuningan - Lomba Akademik Nasional: Juara 1</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="images/logo smk 5.png" alt="SMKN 5 Kuningan Logo">
+            <span>SMKN 5 Kuningan</span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Beranda</a></li>
+                <li><a href="profil.html">Profil Sekolah</a></li>
+                <li><a href="jurusan.html">Jurusan</a></li>
+                <li><a href="kegiatan.html">Galeri</a></li>
+                <li><a href="pendaftaran.html">Pendaftaran</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="news-detail">
+            <article>
+                <img src="images/prestasi1.jpg" alt="Prestasi Lomba Akademik" class="news-image">
+                <h1>Lomba Akademik Nasional: SMKN 5 Kuningan Juara 1</h1>
+                <p class="news-date">14 Januari 2025</p>
+                <p>SMKN 5 Kuningan berhasil meraih Juara 1 dalam lomba akademik tingkat nasional yang diadakan di Jakarta. Ini merupakan prestasi yang membanggakan bagi seluruh siswa dan guru di sekolah kami. Seluruh tim yang terlibat dalam lomba ini bekerja keras untuk meraih kemenangan tersebut. Lomba ini diikuti oleh ribuan peserta dari seluruh Indonesia, dan SMKN 5 Kuningan berhasil menonjol dengan prestasi luar biasa.</p>
+
+                <p>Dengan persiapan yang matang, tim akademik SMKN 5 Kuningan mampu bersaing dengan sekolah-sekolah terbaik di Indonesia. Dalam ajang ini, siswa kami tidak hanya menunjukkan kecerdasan akademik, tetapi juga kemampuan dalam bekerja sama dan menyelesaikan tantangan yang diberikan oleh juri. Kemenangan ini menjadi bukti bahwa SMKN 5 Kuningan memiliki potensi yang besar dalam bidang akademik.</p>
+
+                <p>Sekolah kami berkomitmen untuk terus mendukung siswa dalam mencapai prestasi yang lebih tinggi, baik di bidang akademik maupun non-akademik. Kami percaya bahwa pendidikan yang baik akan membawa perubahan positif bagi masa depan bangsa.</p>
+            </article>
+
+            <!-- Komentar Section -->
+            <section class="comments">
+                <h2>Komentar</h2>
+                <div class="comment-box">
+                    <textarea placeholder="Tulis komentar Anda..." id="comment-text"></textarea>
+                    <button onclick="submitComment()">Kirim Komentar</button>
+                </div>
+
+                <div class="comment-list" id="comment-list">
+                    <!-- Komentar akan muncul di sini -->
+                </div>
+            </section>
+        </section>
+    </main>
+
+     <!-- Footer dengan informasi kontak dan sosial media -->
+     <footer>
+        <p>© 2025 SMKN 5 Kuningan. All rights reserved.</p>
+        <p>Kontak: smkn5kuningan@gmail.com</p>
+
+        <!-- Informasi Sosial Media dan Kontak -->
+        <div class="footer-icons">
+            <a href="https://www.instagram.com/smkn5kuningan" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.facebook.com/smkn5kuningan" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="mailto:smkn5kuningan@example.com" title="Email"><i class="fas fa-envelope"></i></a>
+            <a href="tel:+628123456789" title="Nomor Telepon"><i class="fas fa-phone-alt"></i></a>
+            <a href="https://www.google.com/maps?q=SMKN+5+Kuningan" target="_blank" title="Alamat"><i class="fas fa-map-marker-alt"></i></a>
+        </div>
+    </footer>
+
+    <script>
+        function submitComment() {
+            var commentText = document.getElementById("comment-text").value;
+            if (commentText.trim() === "") {
+                alert("Komentar tidak boleh kosong!");
+                return;
+            }
+
+            var commentList = document.getElementById("comment-list");
+
+            var newComment = document.createElement("div");
+            newComment.classList.add("comment-item");
+
+            var commentContent = document.createElement("p");
+            commentContent.textContent = commentText;
+
+            newComment.appendChild(commentContent);
+            commentList.appendChild(newComment);
+
+            // Clear the textarea after submitting
+            document.getElementById("comment-text").value = "";
+        }
+    </script>
+</body>
+</html>

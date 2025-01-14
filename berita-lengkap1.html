@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semarak Bulan Bahasa SMKN 5 Kuningan</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="images/logo smk 5.png" alt="SMKN 5 Kuningan Logo">
+            <span>SMKN 5 Kuningan</span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Beranda</a></li>
+                <li><a href="profil.html">Profil Sekolah</a></li>
+                <li><a href="jurusan.html">Jurusan</a></li>
+                <li><a href="kegiatan.html">Galeri</a></li>
+                <li><a href="pendaftaran.html">Pendaftaran</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="news-detail">
+            <article>
+                <img src="images/prestasi2.jpg" alt="Lomba Olahraga" class="news-image">
+                <h1>Semarak Bulan Bahasa SMKN 5 Kuningan</h1>
+                <p class="news-date">12 Januari 2025</p>
+                <p>Kuningan (10/2024). SMKN 5 Kuningan menggelar kegiatan bulan bahasa. Tingkatkan Kemahiran Berbahasa melalui Lomba Literasi menjadi tema utama kegiatan ini. Dengan menggambil tiga jenis lomba dari tiga bahasa yaitu Monolog Bahasa Indonesia, Newscaster (Pidato Bahasa Inggris), dan Maca Sajak Sunda ini dimaksudkan untuk dapat mencari dan menyaring peserta didik berprestasi pada bidang literasi.</p>
+
+                <p>Kegiatan bulan bahasa ini diselenggarakan dalam tiga hari, Rabu-Jumat tanggal 9-11 Oktober 2024. Gelaran acara dimulai pada Rabu, 9 Oktober 2024 dengan lomba Monolog Bahasa Indonesia, diikuti hari selanjutnya dengan lomba Newscaster dan Maca Sajak Sunda dengan peserta perwakilan siswa setiap kelas baik tingkat X dan tingkat XI pada setiap lomba.</p>
+
+                <p>Menurut Ade Yaya Kusyaeri, S.Pd. sebagai pelaksana kegiatan lomba menyebutkan, "Selain mencari peserta didik yang berprestasi pada bidang literasi, kegiatan ini pun untuk memudahkan kegiatan-kegiatan selanjutnya baik internal maupun perlombaan sejenis di luar sekolah. Kita memiliki database minat dan bakat siswa melalui lomba-lomba antar kelas."</p>
+
+                <p><strong>Juara Lomba Monolog Bahasa Indonesia</strong></p>
+                <p>1. Melani Nur Padilah kelas X TKJ D</p>
+                <p>2. Nikeisha Nadin Andani kelas X TKJ A</p>
+                <p>3. Fahmi Ramadani kelas X AK A</p>
+
+                <p><strong>Juara Newscaster</strong></p>
+                <p>1. Mutiara Oktaviani kelas XI AKL A</p>
+                <p>2. Airi Rezeva Putri Pratama kelas XI BD B</p>
+                <p>3. Amelia Putri Maharani kelas X TKJ D</p>
+
+                <p><strong>Juara Maca Sajak Sunda</strong></p>
+                <p>1. Serly Seliya kelas XI BD C</p>
+                <p>2. Devi Susilawati kelas XI AKL A</p>
+                <p>3. Muhamad Nur Fariz kelas XI TKJ C</p>
+            </article>
+
+            <!-- Komentar Section -->
+            <section class="comments">
+                <h2>Komentar</h2>
+                <div class="comment-box">
+                    <textarea placeholder="Tulis komentar Anda..." id="comment-text"></textarea>
+                    <button onclick="submitComment()">Kirim Komentar</button>
+                </div>
+
+                <div class="comment-list" id="comment-list">
+                    <!-- Komentar akan muncul di sini -->
+                </div>
+            </section>
+        </section>
+    </main>
+
+     <!-- Footer dengan informasi kontak dan sosial media -->
+     <footer>
+        <p>© 2025 SMKN 5 Kuningan. All rights reserved.</p>
+        <p>Kontak: smkn5kuningan@gmail.com</p>
+
+        <!-- Informasi Sosial Media dan Kontak -->
+        <div class="footer-icons">
+            <a href="https://www.instagram.com/smkn5kuningan" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.facebook.com/smkn5kuningan" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="mailto:smkn5kuningan@example.com" title="Email"><i class="fas fa-envelope"></i></a>
+            <a href="tel:+628123456789" title="Nomor Telepon"><i class="fas fa-phone-alt"></i></a>
+            <a href="https://www.google.com/maps?q=SMKN+5+Kuningan" target="_blank" title="Alamat"><i class="fas fa-map-marker-alt"></i></a>
+        </div>
+    </footer>
+
+    <script>
+        function submitComment() {
+            var commentText = document.getElementById("comment-text").value;
+            if (commentText.trim() === "") {
+                alert("Komentar tidak boleh kosong!");
+                return;
+            }
+
+            var commentList = document.getElementById("comment-list");
+
+            var newComment = document.createElement("div");
+            newComment.classList.add("comment-item");
+
+            var commentContent = document.createElement("p");
+            commentContent.textContent = commentText;
+
+            newComment.appendChild(commentContent);
+            commentList.appendChild(newComment);
+
+            // Clear the textarea after submitting
+            document.getElementById("comment-text").value = "";
+        }
+    </script>
+</body>
+</html>
